@@ -4,7 +4,7 @@ A Translation of Google Cloud Platform Api Design Guide.
 origin: https://cloud.google.com/apis/design/resources
 
 ## Contents:
-- [Introduction 引言]
+- [Introduction 简介]
 - [Resource Oriented Design 面向资源的设计]
 - [Resource Names 资源名称]
 - [Standard Methods 标准方法]
@@ -14,7 +14,7 @@ origin: https://cloud.google.com/apis/design/resources
 - [Naming Conventions 命名规范]
 - [Design Patterns 设计模式]
 - [Documentation 文档说明]
-- [Using proto3 使用Proto3 Buffering]
+- [Using proto3 使用Protocol Bufers 3]
 - [Versioning 版本]
 - [Compatibility 兼容性]
 - [Directory Structure 目录结构]
@@ -24,7 +24,7 @@ origin: https://cloud.google.com/apis/design/resources
 
 
 
-[Introduction 引言]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/index.md
+[Introduction 简介]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/index.md
 [Resource Oriented Design 面向资源的设计]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/resources.md
 [Resource Names 资源名称]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/resource_names.md
 [Standard Methods 标准方法]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/standard_methods.md
@@ -34,7 +34,7 @@ origin: https://cloud.google.com/apis/design/resources
 [Naming Conventions 命名规范]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/naming_convention.md
 [Design Patterns 设计模式]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/design_patterns.md
 [Documentation 文档说明]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/documentation.md
-[Using proto3 使用Proto3 Buffering]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/proto3.md
+[Using proto3 使用Protocol Bufers 3]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/proto3.md
 [Versioning 版本]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/versioning.md
 [Compatibility 兼容性]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/compatibility.md
 [Directory Structure 目录结构]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/directory_structure.md
