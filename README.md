@@ -1,7 +1,9 @@
-# Google Cloud Platform Api Design Guide
+# Google 云平台 Api 设计指南
+
 A Translation of Google Cloud Platform Api Design Guide.
 
-origin: https://cloud.google.com/apis/design/resources
+origin: <https://cloud.google.com/apis/design/>
+
 
 ## Contents:
 - [Introduction 简介]
