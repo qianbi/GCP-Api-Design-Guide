@@ -2,22 +2,22 @@
 
 origin: <https://cloud.google.com/apis/design/resources>
 
-The goal for this Design Guide is to help developers design simple, consistent and easy-to-use networked APIs. At the same time, it also helps converging designs of socket-based RPC APIs with HTTP-based REST APIs.
+本指南的目标是帮助开发者设计出**简单、一致、便于使用**的网络 api。与此同时，该指南还有助于 RPC APIs（基于 socket） 和 REST APIs（基于 HTTP） 这两者设计理念的融合。
 
-Traditionally, people design RPC APIs in terms of API interfaces and methods, such as CORBA and Windows COM. As time goes by, more and more interfaces and methods are introduced. The end result can be an overwhelming number of interfaces and methods, each of them different from the others. Developers have to learn each one carefully in order to use it correctly, which can be both time consuming and error prone.
+一般来说，人们用 api 接口和方法的方式设计 RPC APIs，如 CORBA 和 Windows COM 。随着时间的流逝，会产生越来越多的接口和方法。最后的结果可能是大量互不相同的接口和方法。开发者为了正确的使用这些接口和方法不得不仔细的熟悉它们，这是一件既耗时又容易出错的事情。
 
-The architectural style of REST was first introduced in 2000, primarily designed to work well with HTTP/1.1. Its core principle is to define named resources that can be manipulated using a small number of methods. The resources and methods are known as nouns and verbs of APIs. With the HTTP protocol, the resource names naturally map to URLs, and methods naturally map to HTTP methods POST, GET, PUT, PATCH, and DELETE.
+[REST](http://en.wikipedia.org/wiki/Representational_state_transfer) 架构首次在2000年提出，它主要设计与 HTTP/1.1 协调工作。 REST 架构的核心原则是定义资源，这些资源拥有自己的命名及少量的可用来操作资源的方法。这些资源及方法就是 APIs 的名词和动词。就 HTTP 协议来说，资源的名词对应的就是 url，资源的方法对应的就是 HTTP 的方法 POST、GET、PUT、PATCH 和 DELETE。
 
-On the Internet, HTTP REST APIs have been recently hugely successful. In 2010, about 74% of public network APIs were HTTP REST APIs.
+最近 HTTP REST APIs 在互联网上获得了巨大的成功。2010年，公共网络 api 中 HTTP REST APIs有大约74%的占有率。
 
-While HTTP REST APIs are very popular on the Internet, the amount of traffic they carry is smaller than traditional RPC APIs. For example, about half of Internet traffic in America at peak time is video content, and few people would consider using REST APIs to deliver such content for performance reasons. Inside data centers, many companies use socket-based RPC APIs to carry most network traffic, which can be orders of magnitude higher than public REST APIs.
+虽然 HTTP REST APIs 在互联网上很受欢迎，但是 REST APIs 的流量远小于传统的 RPC APIs 。例如，美国互联网流量高峰时期有一半是视频内容，由于性能的原因很少会有人考虑用 REST APIs 去分发这些视频内容。在数据中心内部，许多公司使用 基于 socket 的 RPC APIs 去做网络数据交互，这些 API 的数量可能比公开的 REST APIs 有更高的数量级。
 
 In reality, both RPC APIs and HTTP REST APIs are needed for various reasons. Ideally, an API platform should provide best support for all APIs. This Design Guide helps you design and build APIs that conform to this principle. It does so by applying resource-oriented design principles to general API design, and defines many common design patterns to improve usability and reduce complexity.
 
 NOTE: This Design Guide explains how to apply REST principles to API designs independent of programming language, operating system, or network protocol. It is NOT a guide solely to creating REST APIs.
 
 
-## What is a REST API?
+## REST API 是什么?
 
 A REST API is modeled as collections of individually-addressable resources (the nouns of the API). Resources are referenced with their resource names and manipulated via a small set of methods (also known as verbs or operations).
 
@@ -67,20 +67,20 @@ The Gmail API service implements the Gmail API and exposes most of Gmail functio
 
 - The Gmail API service: gmail.googleapis.com
 - A collection of users: users/*. Each user has the following resources.
-    - A collection of messages: users/*/messages/*.
-    - A collection of threads: users/*/threads/*.
-    - A collection of labels: users/*/labels/*.
-    - A collection of change history: users/*/history/*.
-    - A resource representing the user profile: users/*/profile.
-    - A resource representing user settings: users/*/settings.
+  - A collection of messages: users/*/messages/*.
+  - A collection of threads: users/*/threads/*.
+  - A collection of labels: users/*/labels/*.
+  - A collection of change history: users/*/history/*.
+  - A resource representing the user profile: users/*/profile.
+  - A resource representing user settings: users/*/settings.
 
 
 ## Google Cloud Pub/Sub API
 
-The pubsub.googleapis.com service implements the Google Cloud Pub/Sub API, which defines the following resource model:
+The `pubsub.googleapis.com` service implements the Google Cloud Pub/Sub API, which defines the following resource model:
 
-- The API service: pubsub.googleapis.com
-- A collection of topics: projects/*/topics/*.
-- A collection of subscriptions: projects/*/subscriptions/*.
+- The API service: `pubsub.googleapis.com`
+- A collection of topics: `projects/*/topics/*`.
+- A collection of subscriptions: `projects/*/subscriptions/*`.
 
 NOTE: Other implementations of the Pub/Sub API may choose different resource naming schemes.

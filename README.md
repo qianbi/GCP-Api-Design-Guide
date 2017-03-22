@@ -21,8 +21,7 @@ origin: <https://cloud.google.com/apis/design/>
 - [Compatibility 兼容性]
 - [Directory Structure 目录结构]
 - [File Structure 文件结构]
-- [HTTP Verbs HTTP动词]
-- [Glossary 词汇表]
+- [Glossary 术语表]
 
 
 
@@ -41,5 +40,4 @@ origin: <https://cloud.google.com/apis/design/>
 [Compatibility 兼容性]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/compatibility.md
 [Directory Structure 目录结构]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/directory_structure.md
 [File Structure 文件结构]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/file_structure.md
-[HTTP Verbs HTTP动词]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/http_verbs.md
-[Glossary 词汇表]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/glossary.md
+[Glossary 术语表]: https://github.com/qianbi/GCP-Api-Design-Guide/blob/master/docs/glossary.md
